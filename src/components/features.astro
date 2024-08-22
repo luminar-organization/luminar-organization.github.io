@@ -1,0 +1,68 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon/components";
+
+const features = [
+  {
+    title: "luminar-organization/http",
+    description:
+      "A simple HTTP library for handling requests, responses, and headers.",
+    icon: "bx:bxs-window-alt",
+  },
+  {
+    title: "luminar-organization/render-engine",
+    description:
+      "The render engine package for the Luminar PHP framework, supporting different templating engines.",
+    icon: "bx:bxs-window-alt",
+  },
+  {
+    title: "luminar-organization/router",
+    description:
+      "A lightweight and flexible router for the Luminar Framework",
+    icon: "bx:bxs-window-alt",
+  },
+  {
+    title: "luminar-organization/core",
+    description:
+      "The core package of Luminar PHP ecosystem, providing essential functionality and structure",
+    icon: "bx:bxs-window-alt",
+  },
+  {
+    title: "luminar-organization/database",
+    description:
+      "Database component of the Luminar PHP framework, handling connections, ORM, and query building.",
+    icon: "bx:bxs-window-alt",
+  },
+  {
+    title: "luminar-organization/security",
+    description:
+      "(WIP) Security package that provide authentication, authorization, firewalls, encryption and hashing.",
+    icon: "bx:bxs-user",
+  },
+];
+---
+
+<div class="mt-16 md:mt-0">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    What you can find in our framework
+  </h2>
+  <p class="text-lg mt-4 text-slate-600">
+    Checkout what features you can find in our Luminar PHP Framework
+  </p>
+</div>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+  {
+    features.map((item) => (
+      <div class="flex gap-4 items-start">
+        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+          <Icon class="text-white" name={item.icon} />
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+        </div>
+      </div>
+    ))
+  }
+</div>

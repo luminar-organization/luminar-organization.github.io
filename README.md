@@ -1,2 +1,1 @@
-# luminar.github.io
-Luminar Website
+# Luminar Website
